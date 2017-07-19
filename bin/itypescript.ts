@@ -158,7 +158,7 @@ class Flags {
 
     static toString() {
         return `
-        FLAG: [debug? ${Flags.debug ? "on" : "off"}, 
+        FLAG: [debug? ${Flags.debug ? "on" : "off"},
                installAt: "${Flags.install}",
                startupScript: "${Flags.startup}",
                workingDirectory: "${Flags.cwd}"]`;
@@ -511,7 +511,7 @@ class Main {
         let specFile = path.join(specDir, "kernel.json");
         let spec = {
             argv: Arguments.kernel,
-            display_name: `Typescript ${require("typescript").version.replace(/([0-9]+\.[0-9]+)\..*/g,"$1")}`,
+            display_name: `Typescript ${require("typescript").version.replace(/([0-9]+\.[0-9]+)\..*/g, "$1")}`,
             language: "typescript",
         };
         fs.writeFileSync(specFile, JSON.stringify(spec));
